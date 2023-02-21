@@ -55,3 +55,11 @@ Route::resource('datapetugas', PetugasController::class);
 Route::resource('dataspp', SppController::class);
 
 
+
+Auth::routes();
+
+Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+
+Auth::routes();
+
+Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
