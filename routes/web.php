@@ -1,12 +1,15 @@
 <?php
 
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\SppController;
 use App\Http\Controllers\HomeController;
+use App\Http\Controllers\UserController;
 use App\Http\Controllers\KelasController;
 use App\Http\Controllers\LoginController;
 use App\Http\Controllers\SiswaController;
 use App\Http\Controllers\PetugasController;
+use App\Http\Controllers\PembayaranController;
 
 
 /*
@@ -29,6 +32,11 @@ route::get('/login', [LoginController::class,'halamanlogin'])->name('halamanlogi
 route::post('/postlogin', [LoginController::class,'postlogin'])->name('postlogin');
 
 
+// User Route
+
+route::get('/user', [UserController::class,'user'])->name('user');
+
+
 
 Route::get('/datasiswa', function () {
        return view('admin/datasiswa');
@@ -46,6 +54,10 @@ Route::get('/datasiswa', function () {
          return view('admin/dataspp');
      });
 
+     Route::get('/dataspp', function () {
+        return view('admin/datapembayaran');
+    });
+
 Route::resource('datasiswa', SiswaController::class);
 
 Route::resource('datakelas', KelasController::class);
@@ -54,6 +66,7 @@ Route::resource('datapetugas', PetugasController::class);
 
 Route::resource('dataspp', SppController::class);
 
+Route::resource('datapembayaran', PembayaranController::class);
 
 
 Auth::routes();

@@ -9,7 +9,7 @@
      {{-- Table --}}
      <div class="card shadow mb-4">
         <div class="card-header py-3">
-            <a href="/datapetugas/create" class="btn btn-primary btn-sm"><i class="fas fa-plus"></i> Tambah Data Siswa</a>
+            <a href="/datapetugas/create" class="btn btn-primary btn-sm"><i class="fas fa-plus"></i> Tambah Data Petugas</a>
         </div>
         <div class="card-body">
         <div class="table-responsive">
